@@ -1,0 +1,122 @@
+.register-form {
+  text-align: center;
+}
+
+.register-form__title {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  color: var(--main-txt-cl);
+  margin-bottom: 12px;
+}
+
+.register-form__group {
+  margin-bottom: 20px;
+}
+
+.register-form__wrap {
+  display: block;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.register-form__label {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--grey-txt-cl);
+  display: block;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.register-form__filed {
+  position: relative;
+}
+
+.register-form__input,
+.register-form__message {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 11px 12px;
+  padding-left: 42px;
+  outline: transparent;
+  width: 100%;
+
+  @include transition(border-color);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-txt-cl);
+  }
+}
+
+.register-form__message {
+  display: block;
+  padding-left: 16px;
+  resize: none;
+  height: 120px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.register-form__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+
+  @include transition(fill);
+
+  .register-form__input:hover + &,
+  .register-form__input:focus + & {
+    fill: var(--accent-txt-cl);
+  }
+}
+
+.register-form__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.register-form__agreement__text {
+  color: var(--grey-txt-cl);
+  user-select: none;
+}
+
+.register-form__agreement__link {
+  color: var(--accent-txt-cl);
+}
+
+.register-form__agreement__icon-uncheck {
+  @include transition(fill);
+
+  .register-form__agreement__checkbox:checked + .register-icon & {
+    opacity: 0;
+  }
+
+  .register-form__agreement__checkbox:hover + .register-form__agreement__icon &,
+  .register-form__agreement__checkbox:focus + .register-form__agreement__icon & {
+    fill: var(--accent-txt-cl);
+  }
+}
+
+.register-form__agreement__icon-check {
+  opacity: 0;
+  @include transition(opacity);
+
+  .register-form__agreement__checkbox:checked + .register-form__agreement__icon & {
+    opacity: 1;
+  }
+}

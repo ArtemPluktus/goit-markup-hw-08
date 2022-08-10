@@ -1,0 +1,30 @@
+.work {
+  @extend .section;
+  padding-top: 0;
+}
+
+.work__list {
+  @extend %list;
+}
+
+.work__item {
+  --items: 3;
+  position: relative;
+}
+
+.work__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--wh-txt-cl);
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+}

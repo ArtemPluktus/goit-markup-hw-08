@@ -1,0 +1,25 @@
+:root {
+  /* Fonts */
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  /* Text colors */
+  --main-txt-cl: #212121;
+  --accent-txt-cl: #2196f3;
+  --grey-txt-cl: #757575;
+  --wh-txt-cl: #ffffff;
+  --bl-txt-cl: #000000;
+  --fill: #afb1b8;
+  --address-cl: rgba(255, 255, 255, 0.6);
+  /* Bg colors */
+  --dark-bg-cl: #2f303a;
+  --grey-bg-cl: #f5f4fa;
+  --accent-btn-cl: #188ce8;
+  /* Border */
+  --border-cl: #ececec;
+  --border-sec-cl: #eeeeee;
+  /* Others */
+  --indent: 30px;
+  --items: 4;
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

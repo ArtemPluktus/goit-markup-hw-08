@@ -52,6 +52,32 @@
           </a>
         </li>
       </ul>
+      <button type="button" class="menu__btn" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="40" height="40" class="menu__svg" aria-label="Переключатель мобильного меню">
+          <use class="icon-menu" href="./images/icons.svg#menu"></use>
+          <use class="icon-close" href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="menu-container" id="menu-container" data-menu>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="./index.html" class="menu__link">Студия</a></li>
+          <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфолио</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        </ul>
+        <ul class="menu__contacts">
+          <li class="menu__contacts__item"><a href="tel:+380961111111" class="menu__tel">+38 096 111 11 11</a></li>
+          <li class="menu__contacts__item"><a href="mailto:info@devstudio.com" class="menu__mail">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu__socials">
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Instagram</a></li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Twitter</a>
+          </li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Facebook</a>
+          </li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <!-- Main section -->
@@ -81,8 +107,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project1.jpg" alt="Проект1" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project1@1x_lg.jpg 1x, ./images/portfolio/project1@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project1@1x_md.jpg 1x, ./images/portfolio/project1@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project1@1x_sm.jpg 1x, ./images/portfolio/project1@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project1@1x_sm.jpg" class="project__img" alt="Проект1" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -96,8 +133,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project2.jpg" alt="Проект2" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project2@1x_lg.jpg 1x, ./images/portfolio/project2@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project2@1x_md.jpg 1x, ./images/portfolio/project2@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project2@1x_sm.jpg 1x, ./images/portfolio/project2@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project2@1x_sm.jpg" class="project__img" alt="Проект2" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -113,8 +161,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project3.jpg" alt="Проект3" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project3@1x_lg.jpg 1x, ./images/portfolio/project3@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project3@1x_md.jpg 1x, ./images/portfolio/project3@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project3@1x_sm.jpg 1x, ./images/portfolio/project3@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project3@1x_sm.jpg" class="project__img" alt="Проект3" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -128,8 +187,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project4.jpg" alt="Проект4" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project4@1x_lg.jpg 1x, ./images/portfolio/project4@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project4@1x_md.jpg 1x, ./images/portfolio/project4@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project4@1x_sm.jpg 1x, ./images/portfolio/project4@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project4@1x_sm.jpg" class="project__img" alt="Проект4" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -143,8 +213,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project5.jpg" alt="Проект5" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project5@1x_lg.jpg 1x, ./images/portfolio/project5@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project5@1x_md.jpg 1x, ./images/portfolio/project5@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project5@1x_sm.jpg 1x, ./images/portfolio/project5@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project5@1x_sm.jpg" class="project__img" alt="Проект5" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -158,8 +239,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project6.jpg" alt="Проект6" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project6@1x_lg.jpg 1x, ./images/portfolio/project6@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project6@1x_md.jpg 1x, ./images/portfolio/project6@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project6@1x_sm.jpg 1x, ./images/portfolio/project6@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project6@1x_sm.jpg" class="project__img" alt="Проект6" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -173,8 +265,19 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project7.jpg" alt="Проект7" class="project__img" width="370"
-                  height="294" />
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project7@1x_lg.jpg 1x, ./images/portfolio/project7@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project7@1x_md.jpg 1x, ./images/portfolio/project7@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project7@1x_sm.jpg 1x, ./images/portfolio/project7@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project7@1x_sm.jpg" class="project__img" alt="Проект7" width="450"
+                    height="294">
+                </picture>
                 <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
                   и сервисов. Все это позволит посетителю получить
                   исчерпывающие сведения о компании или частном лице.</p>
@@ -188,11 +291,21 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project8.jpg" alt="Проект8" class="project__img" width="370"
-                  height="294" />
-                <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
-                  и сервисов. Все это позволит посетителю получить
-                  исчерпывающие сведения о компании или частном лице.</p>
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project8@1x_lg.jpg 1x, ./images/portfolio/project8@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project8@1x_md.jpg 1x, ./images/portfolio/project8@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project8@1x_sm.jpg 1x, ./images/portfolio/project8@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project8@1x_sm.jpg" class="project__img" alt="Проект8" width="450"
+                    height="294">
+                  <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
+                    и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.</p>
               </div>
               <div class="project__wrapper">
                 <h2 class="project__title">Проект <span lang="en">LAB</span></h2>
@@ -203,11 +316,21 @@
           <li class="project__item card-item">
             <a href="" target="_blank" rel="noopener noreferrer nofollow" class="project__link">
               <div class="project__thumb">
-                <img src="./images/portfolio/project9.jpg" alt="Проект9" class="project__img" width="370"
-                  height="294" />
-                <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
-                  и сервисов. Все это позволит посетителю получить
-                  исчерпывающие сведения о компании или частном лице.</p>
+                <picture class="project__img">
+                  <source media="(min-width: 1200px)"
+                    srcset="./images/portfolio/project9@1x_lg.jpg 1x, ./images/portfolio/project9@2x_lg.jpg 2x"
+                    type="image/jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/portfolio/project9@1x_md.jpg 1x, ./images/portfolio/project9@2x_md.jpg 2x"
+                    type="image/jpg">
+                  <source media="(max-width: 768px)"
+                    srcset="./images/portfolio/project9@1x_sm.jpg 1x, ./images/portfolio/project9@2x_sm1x_sm.jpg 2x"
+                    type="image/jpg">
+                  <img src="./images/portfolio/project9@1x_sm.jpg" class="project__img" alt="Проект9" width="450"
+                    height="294">
+                  <p class="project__text">Ресурс предлагает комплексные предложения с разным уровнем функционала
+                    и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.</p>
               </div>
               <div class="project__wrapper">
                 <h2 class="project__title" lang="en">Growing Business</h2>
@@ -239,7 +362,7 @@
           </ul>
         </address>
       </div>
-      <div class="footer-socials">
+      <div class="footer--socials">
         <b class="footer-title">присоединяйтесь</b>
         <ul class="socials">
           <li class="socials__item">
@@ -277,8 +400,8 @@
           <b class="footer-title">Подпишитесь на рассылку</b>
           <input type="email" class="footer-form__input" name="e-mail" placeholder="E-mail">
         </label>
-        <button type="submit" class="main-btn btn">
-          <span class="footer-form-btn__wrap">Подписаться
+        <button type="submit" class="main-btn footer-form__btn btn">
+          <span class="footer-form__btn__wrap">Подписаться
             <svg width="24" height="24" class="footer-form__icon">
               <use href="./images/icons.svg#send"></use>
             </svg>
@@ -287,6 +410,9 @@
       </form>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

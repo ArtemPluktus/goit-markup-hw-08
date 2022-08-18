@@ -52,6 +52,32 @@
           </a>
         </li>
       </ul>
+      <button type="button" class="menu__btn" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="40" height="40" class="menu__svg" aria-label="Переключатель мобильного меню">
+          <use class="icon-menu" href="./images/icons.svg#menu"></use>
+          <use class="icon-close" href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="menu-container" id="menu-container" data-menu>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="./index.html" class="menu__link">Студия</a></li>
+          <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфолио</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        </ul>
+        <ul class="menu__contacts">
+          <li class="menu__contacts__item"><a href="tel:+380961111111" class="menu__tel">+38 096 111 11 11</a></li>
+          <li class="menu__contacts__item"><a href="mailto:info@devstudio.com" class="menu__mail">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu__socials">
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Instagram</a></li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Twitter</a>
+          </li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">Facebook</a>
+          </li>
+          <li class="menu__socials__item"><a href="" class="menu__socials__link">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <!-- Main section -->
@@ -121,18 +147,18 @@
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="work__list card-set">
           <li class="work__item card-item">
-            <img src="./images/work/box1.jpg" alt="Написание программного кода" width="370" height="294"
-              class="work__img" />
+            <img srcset="./images/work/work1@1x.jpg 1x, ./images/work/work1@2x.jpg 2x" src="./images/work/work1@1x.jpg"
+              alt="Написание программного кода" width="370" height="294" class="work__img" />
             <h3 class="work__title">Десктопные приложения</h3>
           </li>
           <li class="work__item card-item">
-            <img src="./images/work/box2.jpg" alt="Разработка мобильных приложений" width="370" height="294"
-              class="work__img" />
+            <img srcset="./images/work/work2@1x.jpg 1x, ./images/work/work2@2x.jpg 2x" src="./images/work/work2@1x.jpg"
+              alt="Разработка мобильных приложений" width="370" height="294" class="work__img" />
             <h3 class="work__title">Мобильные приложения</h3>
           </li>
           <li class="work__item card-item">
-            <img src="./images/work/box3.jpg" alt="дизайнерский подбор цветового решения" width="370" height="294"
-              class="work__img" />
+            <img srcset="./images/work/work3@1x.jpg 1x, ./images/work/work3@2x.jpg 2x" src="./images/work/work3@1x.jpg"
+              alt="дизайнерский подбор цветового решения" width="370" height="294" class="work__img" />
             <h3 class="work__title">Дизайнерские решения</h3>
           </li>
         </ul>
@@ -144,7 +170,14 @@
         <h2 class="section-title">Наша команда</h2>
         <ul class="team__list card-set">
           <li class="team__item card-item">
-            <img src="./images/team/igor.jpg" alt="Игорь Демьяненко" width="270" height="260" class="team-img" />
+            <!-- Дескриптор x -->
+            <!-- <img srcset="./images/team/igor@1x_sm.jpg 1x, ./images/team/igor@2x_sm.jpg 2x"
+              src="/images/team/igor@1x_sm.jpg" alt="Игорь Демьяненко" width="450" height="460" class="team__img" /> -->
+            <!-- Дескриптор w -->
+            <img
+              srcset="./images/team/igor@1x_sm.jpg 450w, ./images/team/igor@2x_sm.jpg 900w, ./images/team/igor@1x_md.jpg 354w, ./images/team/igor@2x_sm.jpg 708w, ./images/team/igor@1x_lg.jpg 370w, ./images/team/igor@2x_lg.jpg 740w"
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354x, 100vw" src="./images/team/igor@1x_sm.jpg"
+              alt="Игорь Демьяненко" width="450" height="460" class="team__img" />
             <div class="team__wrapper">
               <h3 class="team__title">Игорь Демьяненко</h3>
               <p lang="en" class="team__text">Product Designer</p>
@@ -185,7 +218,10 @@
             </div>
           </li>
           <li class="team__item card-item">
-            <img src="./images/team/olga.jpg" alt="Ольга Репина" width="270" height="260" class="team-img" />
+            <img
+              srcset="./images/team/olga@1x_sm.jpg 450w, ./images/team/olga@2x_sm.jpg 900w, ./images/team/olga@1x_md.jpg 354w, ./images/team/olga@2x_sm.jpg 708w, ./images/team/olga@1x_lg.jpg 370w, ./images/team/olga@2x_lg.jpg 740w"
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354x, 100vw" src="./images/team/olga@1x_sm.jpg"
+              alt="Ольга Репина" width="450" height="460" class="team__img" />
             <div class="team__wrapper">
               <h3 class="team__title">Ольга Репина</h3>
               <p lang="en" class="team__text">Frontend Developer</p>
@@ -226,7 +262,10 @@
             </div>
           </li>
           <li class="team__item card-item">
-            <img src="./images/team/nikolai.jpg" alt="Николай Тарасов" width="270" height="260" class="team-img" />
+            <img
+              srcset="./images/team/nikolai@1x_sm.jpg 450w, ./images/team/nikolai@2x_sm.jpg 900w, ./images/team/nikolai@1x_md.jpg 354w, ./images/team/nikolai@2x_sm.jpg 708w, ./images/team/nikolai@1x_lg.jpg 370w, ./images/team/nikolai@2x_lg.jpg 740w"
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354x, 100vw" src="./images/team/nikolai@1x_sm.jpg"
+              alt="Николай Тарасов" width="450" height="460" class="team__img" />
             <div class="team__wrapper">
               <h3 class="team__title">Николай Тарасов</h3>
               <p lang="en" class="team__text">Marketing</p>
@@ -267,7 +306,10 @@
             </div>
           </li>
           <li class="team__item card-item">
-            <img src="./images/team/mihail.jpg" alt="Михаил Ермаков" width="270" height="260" class="team-img" />
+            <img
+              srcset="./images/team/mihail@1x_sm.jpg 450w, ./images/team/mihail@2x_sm.jpg 900w, ./images/team/mihail@1x_md.jpg 354w, ./images/team/mihail@2x_sm.jpg 708w, ./images/team/mihail@1x_lg.jpg 370w, ./images/team/mihail@2x_lg.jpg 740w"
+              sizes="(min-width: 1200px) 270px, (min-width: 768px) 354x, 100vw" src="./images/team/mihail@1x_sm.jpg"
+              alt="Михаил Ермаков" width="450" height="460" class="team__img" />
             <div class="team__wrapper">
               <h3 class="team__title">Михаил Ермаков</h3>
               <p lang="en" class="team__text">UI Designer</p>
@@ -419,8 +461,8 @@
           <b class="footer-title">Подпишитесь на рассылку</b>
           <input type="email" class="footer-form__input" name="e-mail" placeholder="E-mail">
         </label>
-        <button type="submit" class="main-btn btn">
-          <span class="footer-form-btn__wrap">Подписаться
+        <button type="submit" class="main-btn footer-form__btn btn">
+          <span class="footer-form__btn__wrap">Подписаться
             <svg width="24" height="24" class="footer-form__icon">
               <use href="./images/icons.svg#send"></use>
             </svg>
@@ -489,6 +531,7 @@
 
   <!-- Scripts -->
   <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

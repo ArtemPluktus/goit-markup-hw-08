@@ -6,21 +6,46 @@
 
   .logo {
     margin-right: 93px;
+    margin-left: 15px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+    }
   }
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  position: relative;
+
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 738px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .header-contact__list {
   @extend %list;
+  display: none;
 
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  gap: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 
 .header-contact__link {
@@ -29,14 +54,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
-  @include transition(color);
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 
   &:hover,
   &:focus {
     color: var(--accent-txt-cl);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

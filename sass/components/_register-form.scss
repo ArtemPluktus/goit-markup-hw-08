@@ -3,12 +3,14 @@
 }
 
 .register-form__title {
-  display: block;
-  font-weight: 700;
   font-size: 20px;
   line-height: calc(23 / 20);
   text-align: center;
   color: var(--main-txt-cl);
+
+  display: block;
+  font-weight: 700;
+
   margin-bottom: 12px;
 }
 
@@ -30,8 +32,10 @@
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--grey-txt-cl);
+
   display: block;
   text-align: left;
+
   margin-bottom: 4px;
 }
 
@@ -43,12 +47,15 @@
 .register-form__message {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 100%;
+
   padding: 11px 12px;
   padding-left: 42px;
   outline: transparent;
-  width: 100%;
 
-  @include transition(border-color);
+  transition-property: border-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 
   &:hover,
   &:focus {
@@ -73,7 +80,9 @@
   transform: translateY(-50%);
   left: 12px;
 
-  @include transition(fill);
+  transition-property: fill;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 
   .register-form__input:hover + &,
   .register-form__input:focus + & {
@@ -93,6 +102,13 @@
 .register-form__agreement__text {
   color: var(--grey-txt-cl);
   user-select: none;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .register-form__agreement__link {
@@ -100,7 +116,9 @@
 }
 
 .register-form__agreement__icon-uncheck {
-  @include transition(fill);
+  transition-property: fill;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 
   .register-form__agreement__checkbox:checked + .register-icon & {
     opacity: 0;
@@ -114,7 +132,9 @@
 
 .register-form__agreement__icon-check {
   opacity: 0;
-  @include transition(opacity);
+  transition-property: opacity;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
 
   .register-form__agreement__checkbox:checked + .register-form__agreement__icon & {
     opacity: 1;

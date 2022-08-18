@@ -1,0 +1,13 @@
+.menu__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: transparent;
+}
+
+.icon-menu {
+  display: none;
+}/*# sourceMappingURL=menu.css.map */

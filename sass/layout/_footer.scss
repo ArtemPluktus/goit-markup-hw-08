@@ -1,7 +1,18 @@
 .footer {
   background-color: var(--dark-bg-cl);
+
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+
+  &--socials {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   .logo {
     display: inline-block;
@@ -11,7 +22,9 @@
   .socials__link {
     background-color: rgba(255, 255, 255, 0.1);
 
-    @include transition(background-color);
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 
     &:hover,
     &:focus {
@@ -34,35 +47,71 @@
 .footer-title {
   display: block;
   font-weight: 700;
-  text-align: start;
+  text-align: center;
   text-transform: uppercase;
   line-height: calc(16 / 14);
   color: var(--wh-txt-cl);
+
   margin-bottom: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-form {
   display: flex;
-  align-items: flex-end;
-  text-align: left;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+    text-align: left;
+  }
 }
 
 .footer-form__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 15px 16px;
   outline: transparent;
-  width: 358px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-  margin-right: 8px;
   color: var(--wh-txt-cl);
+
+  padding: 15px 16px;
+  margin-right: 8px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
-.footer-form-btn__wrap {
+.footer-form__btn {
+  @media screen and (min-width: 768px) {
+    transform: translateY(7px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    transform: translateY(-20px);
+  }
+}
+
+.footer-form__btn__wrap {
   display: flex;
   align-items: center;
   justify-content: center;

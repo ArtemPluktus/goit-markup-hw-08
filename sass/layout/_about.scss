@@ -1,13 +1,22 @@
 .about__list {
   @extend %list;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+  }
 }
 
 .about__wrapper {
+  background: var(--grey-bg-cl);
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 25px 100px;
-  background: var(--grey-bg-cl);
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -18,5 +27,11 @@
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--main-txt-cl);
+  text-align: center;
+
   margin-bottom: 10px;
+}
+
+.about__text {
+  margin-bottom: 30px;
 }

@@ -1,12 +1,8 @@
 .clients__list {
   @extend %list;
 
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--indent);
-
   --items: 2;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     --items: 3;
@@ -15,10 +11,6 @@
   @media screen and (min-width: 1200px) {
     --items: 6;
   }
-}
-
-.clients__item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .clients__link {
@@ -30,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 51px;
+  padding: 16px;
 
   transition-property: border;
   transition-duration: var(--duration);
@@ -42,11 +34,11 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 16px 59px;
+    padding: 16px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 16px 31px;
+    padding: 16px;
   }
 }
 

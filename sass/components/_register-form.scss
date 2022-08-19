@@ -115,6 +115,10 @@
   color: var(--accent-txt-cl);
 }
 
+.register-form__agreement__icon {
+  flex-shrink: 0;
+}
+
 .register-form__agreement__icon-uncheck {
   transition-property: fill;
   transition-duration: var(--duration);

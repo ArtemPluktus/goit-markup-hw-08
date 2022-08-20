@@ -157,9 +157,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: var(--indent);
@@ -386,15 +383,6 @@ address {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1000;
   overflow-y: scroll;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transition-property: opacity, visibility;
   transition-property: opacity, visibility;
   -webkit-transition-duration: var(--duration);
@@ -410,11 +398,16 @@ address {
 
 .modal {
   position: relative;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   background-color: var(--wh-txt-cl);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   height: 609px;
   padding: 40px;
   -webkit-transition-property: -webkit-transform;
@@ -427,12 +420,19 @@ address {
           transition-timing-function: var(--timing-function);
 }
 .backdrop.is-hidden .modal {
-  -webkit-transform: scale(0) rotate(90deg);
-          transform: scale(0) rotate(90deg);
+  -webkit-transform: translate(-50%) scale(0) rotate(90deg);
+          transform: translate(-50%) scale(0) rotate(90deg);
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
     height: 581px;
   }
 }
@@ -706,6 +706,7 @@ address {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 64px;
   background-color: var(--wh-txt-cl);
   z-index: 1;
   overflow-y: scroll;
@@ -772,7 +773,6 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 32px;
-  margin-bottom: 64px;
 }
 
 .menu__tel {
